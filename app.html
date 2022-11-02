@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aferidor de Areias de Fundição</title>
+    <script src="app.js"></script>
+
+</head>
+
+<body>
+    <h1>calculadora</h1>
+    
+
+<div>
+    <span>
+        tipo de areia
+        
+    </span>
+    <select name="Areia" id="Areia" onchange="aparecer()">
+        <option value="" selected="selected"></option>
+        <option value="areia de silica">AREIA DE SILICA</option>
+        <option value="areia de cromita">AREIA DE CROMITA</option>
+        <option value="areia de cromita">AREIA DE ZIRCONITA</option>
+    </select>
+
+</div>
+
+
+<div>
+    <input type="number" id="valorareia" placeholder="Digite o a quantidade de areia" value="" onkeyup="saveareia(this.value)">
+</div>
+
+<div>
+    <span>
+        porcentagem de resina
+        
+    </span>
+    <select name="porcentagemderesina" id="porcentagemdeRESINA" size="1">
+        <option value="" selected="selected">--</option> 
+        
+        
+    </select>
+
+
+</div>
+
+<div>
+    <span>
+        porcentagem de catalisador
+        
+    </span>
+    <select name="porcentagemdecatalisador" id="porcentagemdeCATALISADOR">
+        <option value="" selected="selected">--</option>
+        
+       
+        
+    </select>
+
+
+</div>
+
+
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="Resultado" onclick="salvardados()">
+        <input type="reset">
+
+      </form>
+
+
+</body>
+
+</html>
