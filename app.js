@@ -10,6 +10,8 @@ pcCatalisador.disabled=true
 
 let valordaAreia = null
 
+let aparecendo = false
+
 
 
 
@@ -31,18 +33,31 @@ const saveareia = (num) => {
 const aparecer = () => {
   let resinas = document.getElementById("pRESINA")
   let catalizadores = document.getElementById("pCATALISADOR")
+  let tareia = document.querySelector('#tipodeareia')
+
+  
+
+  
 
   resinas.innerHTML = "--"
   catalizadores.innerHTML = "--"
 
   
   if(areia.value == "areia de silica"){
+
+    if(tareia.innerText){
+      let lulu = document.querySelector("#listinha")
+      lulu.remove()
+      aparecendo = false
+    } 
+   
     
+
     pcResina.disabled=false
     pcCatalisador.disabled=false
 
-    resinaSilica = ["","0.8","0.9","1.0","1.1","1.2","1.3","1.4","1.5"];
-    catalisadorSilica =["","20","25","30","35","40","45","50"]
+    resinaSilica = ["--","0.8","0.9","1.0","1.1","1.2","1.3","1.4","1.5"];
+    catalisadorSilica =["--","20","25","30","35","40","45","50"]
 
     resinaSilica.forEach((e,k) => {
       pcResina[k] = new Option(e,k)
@@ -53,12 +68,38 @@ const aparecer = () => {
   }
   else if(areia.value == "areia de cromita"){
     
+    
+    if (aparecendo == false){
+      aparecendo = true
+
+    
+      let impor = ["--","Nacional","Importada"]
+      let listanova = document.createElement("select")
+      listanova.id = "listinha";
+
+    
+
+     tareia.appendChild(listanova)
+
+    for (let i = 0; i < impor.length; i++) {
+      let option = document.createElement("option")
+      option.value = impor[i]
+      option.text = impor[i]
+
+      
+      listanova.appendChild(option)
+    }
+
+    } else{
+
+    }
+    
   
     pcResina.disabled=false
     pcCatalisador.disabled=false
 
-    resinaSilica = ["","2","2.1","2.2","2.3","2.4","2.5","2.6","2.7"];
-    catalisadorSilica =["","20","25","30","35","40","45","50"]
+    resinaSilica = ["--","2","2.1","2.2","2.3","2.4","2.5","2.6","2.7"];
+    catalisadorSilica =["--","20","25","30","35","40","45","50"]
 
     resinaSilica.forEach((e,k) => {
       pcResina[k] = new Option(e,k)
@@ -69,12 +110,18 @@ const aparecer = () => {
   }
 
   else if(areia.value == "areia de zirconita"){
+
+    if(tareia.innerText){
+      let lulu = document.querySelector("#listinha")
+      lulu.remove()
+      aparecendo = false
+    } 
   
     pcResina.disabled=false
     pcCatalisador.disabled=false
 
-    resinaSilica = ["","0.8","0.9","1.0","1.1","1.2"];
-    catalisadorSilica =["","15","20","25"]
+    resinaSilica = ["--","0.8","0.9","1.0","1.1","1.2"];
+    catalisadorSilica =["--","15","20","25"]
 
     resinaSilica.forEach((e,k) => {
       pcResina[k] = new Option(e,k)
@@ -118,7 +165,9 @@ formulario.addEventListener('submit', function(event){
   let valorCatalisador = parseFloat(pcCatalisador.options[pcCatalisador.selectedIndex].text)
   console.log("Valor do Catalisador:", valorCatalisador)
   let pesoAreia = parseInt(document.getElementById("valorareia").value)
-  console.log(pesoAreia)
+  console.log("Peso da Areia", pesoAreia)
+  let nacionalidade = document.getElementById("listinha").value
+  console.log("Tipo", nacionalidade)
 
   let soma = ((valorResina / 100)+10)
   console.log(soma)
