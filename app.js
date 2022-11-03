@@ -8,11 +8,20 @@ pcCatalisador.disabled=true
 
 let valordaAreia = null
 
+/**
+ * 
+ * @param {*valordaAreia} num 
+ * essa funcao salva em tempo real a quantidade de areia digitada
+ */
 const saveareia = (num) => {
     valordaAreia = parseInt(num)
     console.log(valordaAreia)
 }
 
+
+/**
+ * essa funcao troca as opcoes das porcentagens de acordo com o tipo de areia
+ */
 const aparecer = () => {
   let resinas = document.getElementById("pRESINA")
   let catalizadores = document.getElementById("pCATALISADOR")
@@ -75,4 +84,19 @@ const aparecer = () => {
   }
 
   
+}
+
+
+// funcao que reseta todo o fomulario
+const Resetar = () => {
+  document.getElementById('formulario').reset();
+
+  pcResina.disabled=true
+  pcCatalisador.disabled=true
+
+
+  let resinas = document.getElementById("pRESINA")
+  let catalizadores = document.getElementById("pCATALISADOR")
+  resinas.innerHTML = "--"
+  catalizadores.innerHTML = "--"
 }
