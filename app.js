@@ -120,6 +120,11 @@ formulario.addEventListener('submit', function(event){
   let pesoAreia = parseInt(document.getElementById("valorareia").value)
   console.log(pesoAreia)
 
+  let soma = ((valorResina / 100)+10)
+  console.log(soma)
+
+  let resultado = document.getElementById("results")
+  resultado.innerHTML = soma
 
 
 })
