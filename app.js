@@ -3,10 +3,16 @@ const areia = document.querySelector("#Areia")
 const pcResina = document.querySelector("#pRESINA")
 const pcCatalisador = document.querySelector("#pCATALISADOR")
 
+let formulario = document.getElementById('formulario')
+
 pcResina.disabled=true
 pcCatalisador.disabled=true
 
 let valordaAreia = null
+
+
+
+
 
 /**
  * 
@@ -46,6 +52,7 @@ const aparecer = () => {
     })
   }
   else if(areia.value == "areia de cromita"){
+    
   
     pcResina.disabled=false
     pcCatalisador.disabled=false
@@ -89,7 +96,7 @@ const aparecer = () => {
 
 // funcao que reseta todo o fomulario
 const Resetar = () => {
-  document.getElementById('formulario').reset();
+  
 
   pcResina.disabled=true
   pcCatalisador.disabled=true
@@ -100,3 +107,19 @@ const Resetar = () => {
   resinas.innerHTML = "--"
   catalizadores.innerHTML = "--"
 }
+
+formulario.addEventListener('submit', function(event){
+  event.preventDefault()
+
+  let tipoAreia = areia.options[areia.selectedIndex].text
+  console.log("Tipo da areia:" ,tipoAreia)
+  let valorResina = parseFloat(pcResina.options[pcResina.selectedIndex].text)
+  console.log("Valor da resina:" ,valorResina)
+  let valorCatalisador = parseFloat(pcCatalisador.options[pcCatalisador.selectedIndex].text)
+  console.log("Valor do Catalisador:", valorCatalisador)
+  let pesoAreia = parseInt(document.getElementById("valorareia").value)
+  console.log(pesoAreia)
+
+
+
+})

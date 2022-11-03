@@ -21,7 +21,7 @@
                 tipo de areia
             </span>
             <select name="Areia" id="Areia" onchange="aparecer()" size="1">
-                <option value="" selected="selected"></option>
+                <option value="">--</option>
                 <option value="areia de silica">AREIA DE SILICA</option>
                 <option value="areia de cromita">AREIA DE CROMITA</option>
                 <option value="areia de zirconita">AREIA DE ZIRCONITA</option>
@@ -70,10 +70,12 @@
         <br>
         <br>
         <br>
-        <input type="submit" value="Resultado" onclick="salvardados()">
+        <button type="submit">Submit</button>
         <input type="reset" onclick="Resetar()">
 
     </form>
+
+    <h2 id="results"></h2>
 
 
 </body>
