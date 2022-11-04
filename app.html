@@ -18,7 +18,7 @@
     <form id="formulario">
         <div >
             <span>
-                tipo de areia
+                Tipo de areia
             </span>
             <select name="Areia" id="Areia" onchange="aparecer()" size="1">
                 <option value="">--</option>
@@ -28,46 +28,55 @@
             </select>
 
         </div>
+        <br>
 
         <div id="tipodeareia">
 
         </div>
 
 
-        <div>
-            <input type="number" id="valorareia" placeholder="Digite o a quantidade de areia" value=""
-                onkeyup="saveareia(this.value)">
-        </div>
-
+       
+        <br>
         <div>
             <span>
-                porcentagem de resina
+                Tipo de resina
 
             </span>
             <select name="porcentagemderesina" id="pRESINA" size="1">
                 <option value="" selected="selected">--</option>
+                <option value="Ferrosa">Ferrosa</option>
+                <option value="NFerrosa">Não Ferrosa</option>
 
 
             </select>
-            <span>%</span>
+            <span></span>
 
 
         </div>
+        <br>
 
         <div>
             <span>
-                porcentagem de catalisador
+                Vida de banca
 
             </span>
             <select name="porcentagemdecatalisador" id="pCATALISADOR">
                 <option value="" selected="selected">--</option>
+                <option value="Lenta">Lenta</option>
+                <option value="Media">Média</option>
+                <option value="Rapida">Rápida</option>
 
 
 
             </select>
-            <span>%</span>
+            <span></span>
 
 
+        </div>
+        <br>
+        <div>
+            <input type="number" id="valorareia" placeholder="Digite o a quantidade de areia" value=""
+                onkeyup="saveareia(this.value)">
         </div>
 
 
