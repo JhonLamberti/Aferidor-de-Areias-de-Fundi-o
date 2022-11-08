@@ -95,6 +95,7 @@ const aparecer = () => {
     }
     
   
+    pcCatalisador.disabled=false
     pcResina.disabled=false
     
 
