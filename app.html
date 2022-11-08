@@ -6,20 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aferidor de Areias de Fundição</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://kit.fontawesome.com/efc2b52a0f.js" crossorigin="anonymous"></script>
 
 
 </head>
 
-<body>
-    <h1>Calculadora</h1>
+<body class="context">
+    
+    
+    <h1></h1>
+    <img src="arcelor png.png" alt="">
+    <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+  
+</div>
 
 
     <form id="formulario">
-        <div >
+        <div class="divareia">
             <span>
                 Tipo de areia
             </span>
+            <br>
+            <br>
+            <i class="fa-solid fa-mountain"></i>
             <select name="Areia" id="Areia" onchange="aparecer()" size="1">
                 <option value="">--</option>
                 <option value="areia de silica">AREIA DE SILICA</option>
@@ -29,19 +42,26 @@
 
         </div>
         <br>
-
-        <div id="tipodeareia">
+<!-- 
+        span da cromita -->
+        
+        <div id="tipodeareia" class="divareia">
+            <i class="fa-solid fa-earth-americas"></i>
+            <span> </span>
 
         </div>
 
 
        
         <br>
-        <div>
+        <div class="divareia">
             <span>
                 Tipo de resina
 
             </span>
+            <br>
+            <br>
+            <i class="fa-solid fa-vials"></i>
             <select name="porcentagemderesina" id="pRESINA" size="1">
                 <option value="" selected="selected">--</option>
                 <option value="Ferrosa">Ferrosa</option>
@@ -55,11 +75,14 @@
         </div>
         <br>
 
-        <div>
+        <div class="divareia">
             <span>
                 Vida de banca
 
             </span>
+            <br>
+            
+            <i class="fa-solid fa-clock"></i>
             <select name="porcentagemdecatalisador" id="pCATALISADOR">
                 <option value="" selected="selected">--</option>
                 <option value="Lenta">Lenta</option>
@@ -74,17 +97,27 @@
 
         </div>
         <br>
-        <div>
-            <input type="number" id="valorareia" placeholder="Digite o a quantidade de areia" value=""
+        <div class="peso">
+            <input type="number" id="valorareia" placeholder="Digite o peso da areia " value=""
                 onkeyup="saveareia(this.value)">
         </div>
 
 
+        
+        
+        
+
+        <div class="bt1">
+            <button type="submit">Aferir</button>
+        </div>
+        
         <br>
-        <br>
-        <br>
-        <button type="submit">Submit</button>
-        <input type="reset" onclick="Resetar()">
+            
+        <div class="bt2">
+            <input type="reset" onclick="Resetar()">
+        </div>
+        
+        
 
     </form>
 

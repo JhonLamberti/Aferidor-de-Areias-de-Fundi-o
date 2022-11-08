@@ -96,7 +96,7 @@ const aparecer = () => {
     
   
     pcResina.disabled=false
-    pcCatalisador.disabled=false
+    
 
   
   }
@@ -167,3 +167,6 @@ formulario.addEventListener('submit', function(event){
 
 
 })
+
+
+
